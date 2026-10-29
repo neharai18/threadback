@@ -1,5 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Threadback is alive.");
+        Project first = new Project("Todo App");
+        Project second=new  Project("Threadback");
+        System.out.println("Created Project:" + first.getName());
+        System.out.println("Created Project:" + second.getName());
     }
 }
