@@ -11,5 +11,14 @@ public class ProjectManager {
         return project.size();
 
     }
+      public void listProjects() {
+        if (project.isEmpty()) {
+            System.out.println("No projects yet.");
+            return;
+        }
+        for (Project p : project) {
+            System.out.println(p.getName());
+        }
+    }  
 
 }
