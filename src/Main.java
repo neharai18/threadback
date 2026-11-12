@@ -1,7 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-      Entry e = new Entry("Quick note", null, EntryType.NOTE);
-System.out.println("[" + e.getContent() + "]"); 
+        Project p = new Project("Todo App");
+        p.addEntry(new Entry("Fixed login bug", "Null check was missing", EntryType.BUG));
+        p.addEntry(new Entry("Use SQLite", "Simple and file-based", EntryType.DECISION));
+        System.out.println(p.getName() + " has " + p.getEntryCount() + " entries");
 
     }
 }
