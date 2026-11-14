@@ -25,5 +25,11 @@ public class Project {
     public int getEntryCount() {
         return entries.size();
     }
+    public void listEntries(){
+        if(entries.isEmpty()){
+        System.out.println("No entries yet.");
+        return ;
+        }
+    }
 
 }
