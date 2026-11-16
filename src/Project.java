@@ -60,7 +60,7 @@ public class Project {
         int printed = 0;
         for (int i = entries.size() - 1; i >= 0 && printed < limit; i--) {
             Entry e = entries.get(i);
-            System.out.println("[" + e.getType() + "]" + e.getTitle());
+            System.out.println("[" + e.getType() + "]"  + e.getTitle());
             printed++;
         }
     }
@@ -69,12 +69,23 @@ public class Project {
         boolean found = false;
         for (Entry e : entries) {
             if (e.getType() == EntryType.TASK && !e.isResolved()) {
-                System.out.println("[TASK] " + e.getTitle());
+                System.out.println("[TASK] "  + e.getTitle());
                 found = true;
             }
         }
         if (!found) {
             System.out.println("No open tasks.");
         }
+    }
+
+    public void resumeWork() {
+        System.out.println(" === Resume: " + name + " ===");
+        System.out.println();
+        System.out.println();
+        System.out.println("Recent activity:");
+        showRecent(3);
+        System.out.println();
+        System.out.println("Open tasks:");
+        showOpenTasks();
     }
 }
