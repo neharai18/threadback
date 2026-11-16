@@ -2,19 +2,20 @@ public class Entry {
     private String title;
     private String content;
     private EntryType type;
+    private boolean resolved;
 
     public Entry(String title, String content, EntryType type) {
-        if (title ==null || title.trim().isEmpty()) {
+        if (title == null || title.trim().isEmpty()) {
             throw new IllegalArgumentException("Title cannot be Empty");
 
         }
-        if (type==null){
-           throw new IllegalArgumentException("Type is required!!");
-        } 
+        if (type == null) {
+            throw new IllegalArgumentException("Type is required!!");
+        }
         this.title = title.trim();
         this.content = (content == null) ? "" : content;
-        this.type=type;
-        
+        this.type = type;
+
     }
 
     public String getTitle() {
@@ -27,5 +28,13 @@ public class Entry {
 
     public EntryType getType() {
         return type;
+    }
+
+    public boolean isResolved() {
+        return resolved;
+    }
+
+    public void markResolved() {
+        resolved = true;
     }
 }
