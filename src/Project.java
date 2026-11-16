@@ -51,6 +51,18 @@ public class Project {
             }
 
         }
+public void showRecent(int limit){
+    if(entries.isEmpty()){
+        System.out.println("No entries yet.");
+        return ;
+    }
+    int printed=0;
+    for(int i=entries.size()-1;i>=0 && printed<limit;i--){
+        Entry e=entries.get(i);
+        System.out.println("["+e.getType()+"]"+e.getTitle());
+        printed++;
+    }
+}
     }
 
 
