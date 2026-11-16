@@ -19,6 +19,14 @@ public class ProjectManager {
         for (Project p : project) {
             System.out.println(p.getName());
         }
-    }  
+    }
+    public Project findProject(String name) {
+    for (Project p : project) {
+       if(p.getName().equalsIgnoreCase(name)){
+        return p;
+       }
+    }
+    return null;
+}  
 
 }
