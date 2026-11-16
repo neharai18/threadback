@@ -79,8 +79,7 @@ public class Project {
     }
 
     public void resumeWork() {
-        System.out.println(" === Resume: " + name + " ===");
-        System.out.println();
+        System.out.println("=== Resume: " + name + " ===");
         System.out.println();
         System.out.println("Recent activity:");
         showRecent(3);
